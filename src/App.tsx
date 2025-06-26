@@ -5,9 +5,12 @@ import Hero from './components/Hero';
 import Categories from './components/Categories';
 import FeaturedProducts from './components/FeaturedProducts';
 import About from './components/About';
-import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
-import Story from './components/Story';
+import Story from './pages/Story';
+import Services from './pages/Services';
+import Contacts from './components/Contacts';
+import Catalog from './pages/Catalog';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -20,11 +23,14 @@ function App() {
             <Categories />
             <FeaturedProducts />
             <About />
-            <Newsletter />
             <Footer />
           </>
         } />
         <Route path="/story" element={<Story />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </Router>
   );

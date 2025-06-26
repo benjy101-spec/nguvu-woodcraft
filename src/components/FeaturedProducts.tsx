@@ -50,13 +50,13 @@ const FeaturedProducts = () => {
   const getBadgeStyle = (badge: string) => {
     switch (badge) {
       case 'Best Seller':
-        return 'bg-green-500 text-white';
+        return 'bg-green-700 text-white';
       case 'New Arrival':  
         return 'bg-blue-500 text-white';
       case 'Sale':
         return 'bg-red-500 text-white';
       case 'Premium':
-        return 'bg-amber-500 text-white';
+        return 'bg-green-700 text-white';
       default:
         return 'bg-gray-500 text-white';
     }
@@ -110,13 +110,13 @@ const FeaturedProducts = () => {
               
               {/* Product Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-stone-900 mb-2 group-hover:text-green-700 transition-colors duration-300">
                   {product.name}
                 </h3>
                 
                 {/* Rating */}
                 <div className="flex items-center mb-3">
-                  <div className="flex text-amber-400">
+                  <div className="flex text-green-400">
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
@@ -156,7 +156,7 @@ const FeaturedProducts = () => {
                 </div>
 
                 {/* Add to Cart Button */}
-                <button className="w-full bg-stone-900 hover:bg-amber-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+                <button className="w-full bg-stone-900 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
                   <ShoppingCart className="w-4 h-4 mr-2" />
                   Add to Cart
                 </button>
@@ -166,7 +166,10 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+          <button 
+            onClick={() => window.location.href = '/products'}
+            className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+          >
             View All Products
           </button>
         </div>
