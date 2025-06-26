@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global background with increased color gradient */
+body {
+  background: linear-gradient(135deg, #d3d3d3 0%, #8b8b8b 100%);
+}

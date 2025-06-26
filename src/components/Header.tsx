@@ -37,17 +37,17 @@ const Header = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
+              <MapPin className="w-4 h-4 text-[#A14A00]" />
               <span>Visit us 5625 Chitoshi Rd Riverside Kitwe</span>
             </div>
           </div>
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span>+260 975 860 675</span>
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-[#A14A00]" />
+                <span>+260 975 860 675</span>
+              </div>
+              <span>Free shipping on orders over $2,000</span>
             </div>
-            <span>Free shipping on orders over $2,000</span>
-          </div>
         </div>
       </div>
 
@@ -105,9 +105,9 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-stone-700" />
+                <X className="w-6 h-6 text-[#A14A00]" />
               ) : (
-                <Menu className="w-6 h-6 text-stone-700" />
+                <Menu className="w-6 h-6 text-[#A14A00]" />
               )}
             </button>
           </div>

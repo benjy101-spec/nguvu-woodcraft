@@ -24,7 +24,7 @@ const Contacts = () => {
 
   return (
     <>
-      <section className="relative h-96 bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: 'url("https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")' }}>
+      <section className="relative h-96 bg-fit bg-center flex items-center justify-center" style={{ backgroundImage: 'url("https://media.istockphoto.com/photos/web-contact-us-icons-on-cubes-picture-id879441788?k=6&m=879441788&s=612x612&w=0&h=gAHNAkakCHK-YtAGs6lGTNZnCSSEQjOeilBYmhj6mUQ=")' }}>
         <h1 className="text-6xl font-bold text-white bg-black bg-opacity-5 px-8 py-4 rounded text-center w-full">
           Contacts
         </h1>
@@ -37,15 +37,15 @@ const Contacts = () => {
           </h1>
           <div className="flex items-center justify-between border-t border-b border-stone-300 py-6 mb-8 space-x-12">
             <div className="flex items-center space-x-6">
-              <Phone className="w-7 h-7 text-green-600" />
+              <Phone className="w-7 h-7 text-[#A14A00]" />
               <span className="text-lg text-stone-700">Phone:+260 975 860 675</span>
             </div>
             <div className="flex items-center space-x-3 border-l border-r border-stone-300 px-6">
-              <Mail className="w-6 h-6 text-green-600" />
+              <Mail className="w-6 h-6 text-[#A14A00]" />
               <span className="text-lg text-stone-700">Email: services@notchtl.com</span>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-8 h-8xt-green-600" />
+              <MapPin className="w-8 h-8 text-[#A14A00]" />
               <span className="text-lg text-stone-700">Address: Plot 13935 Silverest, Off Great East Road, Chongwe, , Lusaka, Zambia</span>
             </div>
           </div>
@@ -89,9 +89,9 @@ const Contacts = () => {
             </div>
             <button
               type="submit"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+              className="bg-[#6B2B00] hover:bg-[#7F3B00] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
             >
-              <Send className="w-5 h-5" />
+              <Send className="w-5 h-5 text-[#A14A00]" />
               <span>Send Message</span>
             </button>
           </form>

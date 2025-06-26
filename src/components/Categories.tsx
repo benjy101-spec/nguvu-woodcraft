@@ -1,5 +1,8 @@
 import React from 'react';
+import Slider from 'react-slick';
 import { ArrowRight } from 'lucide-react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Categories = () => {
   const categories = [
@@ -78,12 +81,36 @@ const Categories = () => {
     },
   ];
 
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    swipe: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  };
+
   return (
     <section id="furniture" className="py-20 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-6">
-            Shop by Category
+            Category Of Products in Stock
           </h2>
           <p className="text-xl text-stone-600 max-w-3xl mx-auto">
             Discover our curated collections of premium woodcraft furniture and accessories, 
@@ -91,11 +118,11 @@ const Categories = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <Slider {...settings}>
           {categories.map((group, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg mx-4"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -107,31 +134,25 @@ const Categories = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-3xl font-bold text-stone-900 mb-3 group-hover:text-green-700 transition-colors duration-300">
+                <h3 className="text-3xl font-bold text-stone-900 mb-3 group-hover:text-[#4A1A01] transition-colors duration-300">
                   {group.groupTitle}
                 </h3>
-                <p className="text-stone-600 mb-4 leading-relaxed">
+                <p className="text-black mb-4 leading-relaxed">
                   {group.description}
                 </p>
-                <ul className="list-disc list-inside mb-6 text-stone-700">
+                <ul className="list-disc list-inside mb-6 text-black">
                   {group.subcategories.map((subcat, subIndex) => (
                     <li key={subIndex} className="mb-1">{subcat}</li>
                   ))}
                 </ul>
-                <button className="flex items-center text-green-700 hover:text-green-800 font-semibold group-hover:translate-x-2 transition-all duration-300">
+                <button className="flex items-center text-[#4A1A01] hover:text-[#6B2B00] font-semibold group-hover:translate-x-2 transition-all duration-300">
                   Shop Now
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </button>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-            View All Categories
-          </button>
-        </div>
+        </Slider>
       </div>
     </section>
   );

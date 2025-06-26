@@ -7,30 +7,36 @@ const products = [
     name: 'Milano Teak Dining Set',
     price: 3299,
     originalPrice: 3699,
-    image: 'https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+    image: 'https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
   },
   {
     id: 2,
     name: 'Coastal Wicker Lounge Set',
     price: 2199,
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+    image: 'https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1600',
   },
   {
     id: 3,
     name: 'Modern Fire Pit Table',
     price: 1599,
     originalPrice: 1899,
-    image: 'https://images.pexels.com/photos/1482928/pexels-photo-1482928.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+    image: 'https://c.shld.net/rpx/i/s/i/spin/10138141/prod_1519242312??hei=64&wid=64&qlt=50',
   },
   {
     id: 4,
     name: 'Tuscany Umbrella',
     price: 899,
-    image: 'https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+    image: 'https://i.pinimg.com/originals/57/07/a5/5707a598588e86e9fd900c5cb7b730c1.jpg',
   }
 ];
 
 const Products = () => {
+  const currencyFormatter = new Intl.NumberFormat('en-ZM', {
+    style: 'currency',
+    currency: 'ZMW',
+    minimumFractionDigits: 2,
+  });
+
   return (
     <>
       <section className="relative h-96 bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: 'url("https://www.royhomedesign.com/wp-content/uploads/2017/03/the-best-wooden-furniture-material-in-maple-wood-dining-room-furniture-sets-for-home-furniture-interior-decoration.jpg")' }}>
@@ -45,7 +51,7 @@ const Products = () => {
             {products.map((product) => (
               <div 
                 key={product.id}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg"
+                className="group relative bg-white rounded-3xl overflow-hidden shadow-lg"
               >
                 <img 
                   src={product.image}
@@ -57,7 +63,7 @@ const Products = () => {
                     {product.name}
                   </h3>
                   <div className="text-2xl font-bold text-stone-900">
-                    ${product.price.toLocaleString()}
+                    {currencyFormatter.format(product.price)}
                   </div>
                 </div>
               </div>

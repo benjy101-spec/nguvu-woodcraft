@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const Story = () => {
   return (
     <>
-      <section className="relative h-96 bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: 'url("https://www.furnituremakers.org.uk/wp-content/uploads/2024/05/Divan-base-building.jpg")' }}>
+      <section className="relative h-96 bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: 'url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rustic-weathered-wood-logs-royalty-free-image-1654709658.jpg?crop=1.00xw:0.753xh;0' }}>
         <h1 className="text-6xl font-bold text-white bg-black bg-opacity-5 px-8 py-4 rounded text-center w-full">
           Our Story
         </h1>
