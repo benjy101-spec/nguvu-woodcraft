@@ -91,7 +91,7 @@ const Contacts = () => {
               type="submit"
               className="bg-[#6B2B00] hover:bg-[#7F3B00] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
             >
-              <Send className="w-5 h-5 text-[#A14A00]" />
+              <Send className="w-5 h-5 text-[#B75A00]" />
               <span>Send Message</span>
             </button>
           </form>

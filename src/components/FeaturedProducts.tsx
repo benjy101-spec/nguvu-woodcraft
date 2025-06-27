@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Heart, ShoppingCart, Eye } from 'lucide-react';
+import CountUpNumber from './CountUpNumber';
 
 const FeaturedProducts = () => {
   const products = [
@@ -76,10 +77,11 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <div 
               key={product.id}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 opacity-0 animate-fadeInUp animation-delay-[calc(100ms*var(--delay))]"
+              style={{ '--delay': index } as React.CSSProperties}
             >
               {/* Product Image */}
               <div className="relative overflow-hidden">
@@ -90,7 +92,7 @@ const FeaturedProducts = () => {
                 />
                 
                 {/* Badge */}
-                <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold ${getBadgeStyle(product.badge)}`}>
+                <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold ${getBadgeStyle(product.badge)} transition-all duration-300 hover:brightness-110`}>
                   {product.badge}
                 </div>
 

@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight mt-10">
               Strong and Durable
-              <span className="block text-[#A14A00]">WoodCraft</span>
+              <span className="block text-[#B75A00]">WoodCraft</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
               Discover premium furniture and design solutions that blend comfort, 
@@ -26,14 +26,16 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
-               onClick={() => window.location.href = '/products'}
-               className="bg-[#6B2B00] hover:bg-[#7F3B00] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+                onClick={() => window.location.href = '/products'}
+                className="bg-gradient-to-r from-yellow-700 via-orange-600 to-yellow-500 hover:from-yellow-500 hover:via-orange-500 hover:to-yellow-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg flex items-center justify-center group"
+              >
                 Products Offered
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 text-[#A14A00]" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 text-yellow-300" />
               </button>
-              <button 
-              onClick={() => window.location.href = '/contacts'}
-              className="border-2 border-[#6B2B00] text-white hover:bg-[#7F3B00] hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              <button
+                onClick={() => window.location.href = '/contacts'}
+                className="border-2 border-yellow-600 text-white hover:bg-gradient-to-r hover:from-yellow-600 hover:via-orange-600 hover:to-yellow-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+              >
                 Contact Us
               </button>
             </div>
@@ -41,27 +43,21 @@ const Hero = () => {
             {/* Features */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
               <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <Leaf className="w-6 h-6 text-[#A14A00]" />
+                <Leaf className="w-6 h-6 text-yellow-600" />
                 <span className="font-medium">Sustainable Materials</span>
               </div>
               <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <Award className="w-6 h-6 text-[#A14A00]" />
+                <Award className="w-6 h-6 text-yellow-600" />
                 <span className="font-medium">Premium Quality</span>
               </div>
               <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <Truck className="w-6 h-6 text-[#A14A00]" />
+                <Truck className="w-6 h-6 text-yellow-600" />
                 <span className="font-medium">Country-wide Delivery</span>
               </div>
             </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>
   );
 };

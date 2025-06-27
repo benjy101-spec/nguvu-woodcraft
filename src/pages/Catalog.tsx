@@ -21,17 +21,17 @@ const Catalog = () => {
 
           <ul className="space-y-4 max-w-md mx-auto">
             <li>
-              <a href="/catalogs/nguvi-woodcraft-2024.pdf" download className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-green-600 font-semibold text-center">
+              <a href="https://www.sherrillfurniture.com/sites/sherrillfurniture.com/files/pdfs/14023%20Sherrill%20Furniture%202024%20Supplement_WEB.pdf" download className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-[#B75A00] font-semibold text-center">
                 Nguvu Woodcraft Catalog 2024
               </a>
             </li>
             <li>
-              <a href="/catalogs/nguvi-woodcraft-2023.pdf" download className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-green-600 font-semibold text-center">
+              <a href="https://www.sherrillfurniture.com/sites/sherrillfurniture.com/files/pdfs/14023%20Sherrill%20Furniture%202024%20Supplement_WEB.pdf" download className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-[#B75A00] font-semibold text-center">
                 Nguvu Woodcraft Catalog 2023
               </a>
             </li>
             <li>
-              <a href="/catalogs/nguvi-woodcraft-2022.pdf" download className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-green-600 font-semibold text-center">
+              <a href="https://www.sherrillfurniture.com/sites/sherrillfurniture.com/files/pdfs/14023%20Sherrill%20Furniture%202024%20Supplement_WEB.pdf" download className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-[#B75A00] font-semibold text-center">
                 Nguvu Woodcraft Catalog 2022
               </a>
             </li>

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Categories from './components/Categories';
-import FeaturedProducts from './components/FeaturedProducts';
 import About from './components/About';
 import Footer from './components/Footer';
 import Story from './pages/Story';
@@ -21,7 +20,6 @@ function App() {
           <>
             <Hero />
             <Categories />
-            <FeaturedProducts />
             <About />
             <Footer />
           </>

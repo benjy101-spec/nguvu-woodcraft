@@ -10,29 +10,29 @@ const Footer = () => {
       <div className="border-b border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            <div className="flex items-center justify-center space-x-4">
-              <Truck className="w-9 h-9 text-green-400 transition-transform duration-300 group-hover:scale-110" />
+          <div className="flex items-center justify-center space-x-4">
+              <Truck className="w-9 h-9 text-mahogany transition-transform duration-300 group-hover:scale-110" />
               <div>
                 <div className="font-semibold text-lg">Country-Wide Delivery </div>
                 <div className="text-sm text-stone-400">delivered promptly</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4">
-              <Shield className="w-9 h-9 text-green-400 transition-transform duration-300 group-hover:scale-110" />
+              <Shield className="w-9 h-9 text-mahogany transition-transform duration-300 group-hover:scale-110" />
               <div>
                 <div className="font-semibold text-lg">Extended Warranty</div>
                 <div className="text-sm text-stone-400">Up to 10 years coverage for peace of mind</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4">
-              <Eye className="w-9 h-9 text-green-400 transition-transform duration-300 group-hover:scale-110" />
+              <Eye className="w-9 h-9 text-mahogany transition-transform duration-300 group-hover:scale-110" />
               <div>
                 <div className="font-semibold text-lg">Complete Transparency</div>
                 <div className="text-sm text-stone-400">No hidden fees or surprises</div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4">
-              <Leaf className="w-9 h-9 text-green-400 transition-transform duration-300 group-hover:scale-110" />
+              <Leaf className="w-9 h-9 text-mahogany transition-transform duration-300 group-hover:scale-110" />
               <div>
                 <div className="font-semibold text-lg">Eco-Friendly Promise</div>
                 <div className="text-sm text-stone-400">Certified sustainable timber and practices</div>
@@ -66,19 +66,19 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-green-700 hover:bg-green-800 rounded-lg text-white font-semibold transition-colors duration-300"
+                className="px-6 py-3 bg-mahogany hover:bg-mahogany-bright rounded-lg text-white font-semibold transition-colors duration-300"
               >
                 Subscribe
               </button>
             </form>
             <div className="flex space-x-6 mt-6 justify-center w-full max-w-md">
-              <a href="#" className="p-3 bg-stone-800 hover:bg-green-700 rounded-lg transition-colors duration-300">
+              <a href="#" className="p-3 bg-mahogany-dark hover:bg-mahogany-bright rounded-lg transition-colors duration-300">
                 <Facebook className="w-4 h-3" />
               </a>
-              <a href="#" className="p-3 bg-stone-800 hover:bg-green-700 rounded-lg transition-colors duration-300">
+              <a href="#" className="p-3 bg-mahogany-dark hover:bg-mahogany-bright rounded-lg transition-colors duration-300">
                 <Instagram className="w-3 h-3" />
               </a>
-              <a href="#" className="p-3 bg-stone-800 hover:bg-green-700 rounded-lg transition-colors duration-300">
+              <a href="#" className="p-3 bg-mahogany-dark hover:bg-mahogany-bright rounded-lg transition-colors duration-300">
                 <Twitter className="w-3 h-3" />
               </a>
              </div>
@@ -89,19 +89,16 @@ const Footer = () => {
             <h3 className="text-3xl font-extrabold mb-6">Company Info</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-green-400" />
+                <Phone className="w-6 h-6 text-mahogany" />
                 <span className="text-lg">+260 975 860 675</span>
               </div>
               <div className="flex items-right space-x-4">
-                <Mail className="w-6 h-6 text-green-400" />
+                <Mail className="w-6 h-6 text-mahogany" />
                 <span className="text-lg">service@notchtl.com</span>
               </div>
               <div className="flex items-right space-x-4">
-                <MapPin className="w-6 h-6 text-green-400" />
+                <MapPin className="w-6 h-6 text-mahogany" />
                 <span className="text-lg">5625 Chitoshi Rd Riverside Kitwe</span>
-
-
-
               </div>
             </div>
           </div>

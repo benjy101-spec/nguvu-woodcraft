@@ -42,7 +42,7 @@ const Story = () => {
             <li>Community Impact: Training programs for rural woodworkers</li>
             <li>Sustainable Growth: Planting 3 trees for every one harvested</li>
           </ul>
-          <blockquote className="border-l-4 border-green-600 pl-4 italic text-stone-900 text-lg">
+          <blockquote className="border-l-4 border-yellow-700 pl-4 italic text-stone-900 text-lg">
             "We don't just make furniture; we sustain Zambian forests and families for generations."
             <br />
             — Jacob Mwila, Lead Craftsman

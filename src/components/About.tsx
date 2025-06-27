@@ -1,12 +1,13 @@
 import React from 'react';
 import { Award, Users, Leaf, Shield, Clock, Heart } from 'lucide-react';
+import CountUpNumber from './CountUpNumber';
 
 const About = () => {
   const stats = [
     { number: '25+', label: 'Years of Excellence' },
-    { number: '50,000+', label: 'Happy Customers' },
-    { number: '500+', label: 'Premium Products' },
-    { number: '15', label: 'Showroom Locations' }
+    { number: '5000+', label: 'Happy Customers' },
+    { number: '50+', label: 'Premium Products' },
+    { number: '20+', label: 'Showroom Locations' }
   ];
 
   const values = [
@@ -50,7 +51,7 @@ const About = () => {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-6">
               About
-              <span className="block text-green-700">Nguvu WoodCraft</span>
+              <span className="block text-[#A14A00]">Nguvu WoodCraft</span>
             </h2>
             <p className="text-xl text-stone-600 mb-6 leading-relaxed max-w-3xl mx-auto">
              Notch Technology Limited trading as “Nguvu Woodcraft” aims to establish a vertically integrated furniture-manufacturing and retail business leveraging abundant African hardwoods and eucalyptus across Zambia and Congo DR.  
@@ -63,7 +64,7 @@ Production will occur in a purpose-built 500 m² workshop in Kitwe, with three b
             <div className="flex flex-col sm:flex-row gap-4">
               <button
               onClick={() => window.location.href = '/story'} 
-              className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              className="bg-[#A14A00] hover:bg-[#A14A00]-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Our Story
               </button>
               <button
@@ -76,13 +77,12 @@ Production will occur in a purpose-built 500 m² workshop in Kitwe, with three b
           
           <div className="relative">
             <img 
-              src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+              src="https://img.freepik.com/premium-photo/black-senior-man-cutting-wood-building-furniture-workshop_249974-19456.jpg"
               alt="Outdoor furniture craftsmanship"
               className="rounded-2xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold text-green-700 mb-1">A+</div>
-              <div className="text-sm text-stone-600">BBB Rating</div>
+              <div className="text-3xl font-bold text-[#A14A00] mb-1">A+</div>
             </div>
           </div>
         </div>
@@ -90,9 +90,13 @@ Production will occur in a purpose-built 500 m² workshop in Kitwe, with three b
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            <div 
+              key={index} 
+              className="text-center opacity-0 animate-fadeInUp animation-delay-[calc(100ms*var(--delay))]"
+              style={{ '--delay': index } as React.CSSProperties}
+            >
               <div className="text-4xl md:text-5xl font-bold text-stone-900 mb-2">
-                {stat.number}
+                <CountUpNumber end={stat.number} />
               </div>
               <div className="text-stone-600 font-medium">
                 {stat.label}
@@ -119,10 +123,11 @@ craftsmanship with the strongest African hardwoods to make home and office furni
               return (
                 <div 
                   key={index}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 opacity-0 animate-fadeInUp animation-delay-[calc(100ms*var(--delay))]"
+                  style={{ '--delay': index } as React.CSSProperties}
                 >
-                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-green-700" />
+                  <div className="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                    <IconComponent className="w-8 h-8 text-[#B75A00] animate-pulse" />
                   </div>
                   <h4 className="text-xl font-bold text-stone-900 mb-4">
                     {value.title}

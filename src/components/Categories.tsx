@@ -1,51 +1,33 @@
 import React from 'react';
-import Slider from 'react-slick';
 import { ArrowRight } from 'lucide-react';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 
 const Categories = () => {
   const categories = [
-    {
-      groupTitle: 'Core Product Lines',
-      description: 'Our essential handcrafted wood products for every home.',
-      image: 'https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      subcategories: [
-        'Beds (Double/Queen)',
-        'Doors (Interior/Exterior)',
-        'Outdoor Sets (Tables + Chairs)',
-        'Dining Tables',
-        'Cabinets & Storage (Kitchen, Freestanding)',
-        'Decorative Wood Pieces (Shelves, Wall Art, Accent Décor)',
-        'Picture Frames',
-      ],
-    },
-    {
+   {
       groupTitle: 'Home Furniture',
       description: 'Comfortable and stylish furniture to enhance your living spaces.',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://urbanmatter.com/wp-content/uploads/2023/05/WoodFurnitureFeat.png',
       subcategories: [
         'Beds (Platform, Bunk, Canopy)',
-        'Dining Sets (Table + Chairs)',
+        'Dining Sets',
         'Sofas & Armchairs',
         'Coffee Tables',
         'TV Stands',
         'Bookshelves',
         'Wardrobes',
-        'Dressers',
         'Nightstands',
-        'Console Tables',
+        
       ],
     },
     {
       groupTitle: 'Lodge Furniture',
       description: 'Rustic and cozy furniture perfect for lodge and cabin settings.',
-      image: 'https://images.pexels.com/photos/1482928/pexels-photo-1482928.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://paradiseteak.com/wp-content/themes/paradise-teak/images/sliderindex.jpg',
       subcategories: [
         'Rustic Tables',
         'Log Beds',
         'Bench Seating',
-        'Wooden Chairs (Adirondack, Rocking)',
+        'Wooden Chairs ',
         'Bar Stools',
         'Fireplace Mantels',
         'Lodge Shelves',
@@ -54,7 +36,7 @@ const Categories = () => {
     {
       groupTitle: 'Office Furniture',
       description: 'Functional and elegant furniture for productive workspaces.',
-      image: 'https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://www.office.eco/images/conference-tables/modern-conference-table.jpg',
       subcategories: [
         'Desks (Workstation & Executive)',
         'Office Chairs',
@@ -68,7 +50,7 @@ const Categories = () => {
     {
       groupTitle: 'School Furniture',
       description: 'Durable and practical furniture designed for educational environments.',
-      image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://aps.jo/wp-content/uploads/2020/11/library4.jpg',
       subcategories: [
         "Classroom Desks",
         "Teacher's Desks",
@@ -80,30 +62,6 @@ const Categories = () => {
       ],
     },
   ];
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: true,
-    swipe: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  };
 
   return (
     <section id="furniture" className="py-20 bg-stone-50">
@@ -118,11 +76,11 @@ const Categories = () => {
           </p>
         </div>
 
-        <Slider {...settings}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((group, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg mx-4"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -145,14 +103,25 @@ const Categories = () => {
                     <li key={subIndex} className="mb-1">{subcat}</li>
                   ))}
                 </ul>
-                <button className="flex items-center text-[#4A1A01] hover:text-[#6B2B00] font-semibold group-hover:translate-x-2 transition-all duration-300">
-                  Shop Now
+                <button
+                onClick={() => window.open('/catalog', '_blank', 'noopener,noreferrer')}  
+                className="flex items-center text-[#4A1A01] hover:text-[#6B2B00] font-semibold group-hover:translate-x-2 transition-all duration-300">
+                  View Catalog
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </button>
               </div>
-            </div>
+             </div>
           ))}
-        </Slider>
+        </div>
+
+        <div className="text-center mt-12">
+          <button 
+            onClick={() => window.location.href = '/products'}
+            className="bg-yellow-700 hover:bg-yellow-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+          >
+            View All Products
+          </button>
+        </div>
       </div>
     </section>
   );
